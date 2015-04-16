@@ -1,170 +1,75 @@
 jQuery(function($) {
-	$(document).ajaxStart(function(){
-		$.blockUI({ message: '<h4 class="margin-top10 margin-bottom10"><i class="fa fa-spinner fa-spin"></i> Espere por favor</h4 class= "nomargin">' });
-	}).ajaxComplete(function() {
-		$.unblockUI();
+	
+	new WOW().init();
+	
+	$(window).load(function(){
+	  $("#navigation").sticky({ topSpacing: 0 });
 	});
 
-	var is_msie = (navigator.appVersion.indexOf("MSIE")!=-1) ? true : false;
-	var map;
+	jQuery(window).load(function() { 
+		jQuery("#preloader").delay(100).fadeOut("slow");
+		jQuery("#load").delay(100).fadeOut("slow");
+	});
 
-	if ( $('.scrollup').length > 0 ) {
-		$(window).scroll(function(){
-			if ($(this).scrollTop() > 100) {
-				$('.scrollup').fadeIn();
-			} else {
-				$('.scrollup').fadeOut();
-			}
+
+	//jQuery for page scrolling feature - requires jQuery Easing plugin
+	$(function() {
+		$('.navbar-nav li a').bind('click', function(event) {
+			var $anchor = $(this);
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top
+			}, 1500, 'easeInOutExpo');
+			event.preventDefault();
 		});
-		
-		$('.scrollup').click(function(){
-			$("html, body").animate({ scrollTop: 0 }, 1000);
-			return false;
+		$('.page-scroll a').bind('click', function(event) {
+			var $anchor = $(this);
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top
+			}, 1500, 'easeInOutExpo');
+			event.preventDefault();
 		});
-	}
-
-	toggle();
-
-	if ( $('#sample-download-modal-btn').length > 0 ) {
-		$( '#sample-download-modal-btn' ).click(function() {
-
-			$.ajax({
-				type:'POST'
-				,url:'samples/form-download'
-				,dataType:'json'
-				,success:function(data){
-					if(data.success){
-						
-						$("#defaultModal .modal-content").html(data.html);
-						$('#defaultModal').modal('show');
-					
-					} else {
-						$('#modal-error-msg').html(data.error);
-						$('#errorModal').modal('show');
-					}
-				}
-			}).always(function(){
-			});
-		  
+	});
+	
+	//owl carousel
+	$('#owl-works').owlCarousel({
+			items : 4,
+			itemsDesktop : [1199,5],
+			itemsDesktopSmall : [980,5],
+			itemsTablet: [768,5],
+			itemsTabletSmall: [550,2],
+			itemsMobile : [480,2],
 		});
-	}
-	if ( $('#audiomu-tutorial-modal-btn').length > 0 ) {
-		$( '#audiomu-tutorial-modal-btn' ).click(function() {
-			var theModal = $(this).data('target'),
-			videoSRC     = 'http://www.youtube.com/embed/yozAaOcddjs',
-			videoSRCauto = videoSRC + '?autoplay=1';
-
-			$(theModal + ' iframe').attr('src', videoSRCauto);
-			$(theModal + ' button.close').click(function () {
-				$(theModal + ' iframe').attr('src', videoSRC);
-			});
-		});
-	}
-
-	if ( $('#contactForm').length > 0 ) {
-		
-	}
-	if ( $('.pageScrollerNav').length > 0 ) {
-		// local scroll
-		jQuery('.pageScrollerNav, .page-scroll').localScroll({
-			hash:true
-			,offset:{top: 0}
-			,duration: 1200
-			,easing:'easeInOutExpo'
+	
+	//nivo lightbox
+	$('.owl-carousel .item a').nivoLightbox({
+		effect: 'fadeScale',                             // The effect to use when showing the lightbox
+		theme: 'default',                           // The lightbox theme to use
+		keyboardNav: true,                          // Enable/Disable keyboard navigation (left/right/escape)
+		clickOverlayToClose: true,                  // If false clicking the "close" button will be the only way to close the lightbox
+		onInit: function(){},                       // Callback when lightbox has loaded
+		beforeShowLightbox: function(){},           // Callback before the lightbox is shown
+		afterShowLightbox: function(lightbox){},    // Callback after the lightbox is shown
+		beforeHideLightbox: function(){},           // Callback before the lightbox is hidden
+		afterHideLightbox: function(){},            // Callback after the lightbox is hidden
+		onPrev: function(element){},                // Callback when the lightbox gallery goes to previous item
+		onNext: function(element){},                // Callback when the lightbox gallery goes to next item
+		errorMessage: 'The requested content cannot be loaded. Please try again later.' // Error message when content can't be loaded
+	});
+	
+	
+	//parallax
+	if ($('.parallax').length)
+	{
+		$(window).stellar({
+			responsive:true,
+			scrollProperty: 'scroll',
+			parallaxElements: false,
+			horizontalScrolling: false,
+			horizontalOffset: 0,
+			verticalOffset: 0
 		});
 
-		//scroll menu
-		jQuery('.appear').appear();
-		jQuery(".appear").on("appear", function(data) {
-			var id = $(this).closest("section").attr("id");
-			jQuery('.pageScrollerNav li').removeClass('active');
-			jQuery(".pageScrollerNav a[href='#" + id + "']").parent().addClass("active");					
-		});
-	}
-
-	if (typeof(soundManager) != "undefined") {
-		soundManager.setup({
-			// path to directory containing SM2 SWF
-			url: 'js/vendor/soundmanager/swf/'
-		});
-
-		threeSixtyPlayer.config.scaleFont = (navigator.userAgent.match(/msie/i)?false:true);
-		threeSixtyPlayer.config.showHMSTime = true;
-
-		// enable some spectrum stuffs
-		threeSixtyPlayer.config.useWaveformData = true;
-		threeSixtyPlayer.config.useEQData = true;
-
-		// enable this in SM2 as well, as needed
-		if (threeSixtyPlayer.config.useWaveformData) {
-		  soundManager.flash9Options.useWaveformData = true;
-		}
-		if (threeSixtyPlayer.config.useEQData) {
-		  soundManager.flash9Options.useEQData = true;
-		}
-		if (threeSixtyPlayer.config.usePeakData) {
-		  soundManager.flash9Options.usePeakData = true;
-		}
-		if (threeSixtyPlayer.config.useWaveformData || threeSixtyPlayer.flash9Options.useEQData || threeSixtyPlayer.flash9Options.usePeakData) {
-		  // even if HTML5 supports MP3, prefer flash so the visualization features can be used.
-		  soundManager.preferFlash = true;
-		}
-		// favicon is expensive CPU-wise, but can be used.
-		if (window.location.href.match(/hifi/i)) {
-		  threeSixtyPlayer.config.useFavIcon = true;
-		}
-		if (window.location.href.match(/html5/i)) {
-		  // for testing IE 9, etc.
-		  soundManager.useHTML5Audio = true;
-		}
-	}
+	}	
 
 });
-
-function toggle() {
-
-	var $_t = this,
-		previewParClosedHeight = 25;
-
-	jQuery("div.toggle.active > p").addClass("preview-active");
-	jQuery("div.toggle.active > div.toggle-content").slideDown(400);
-	jQuery("div.toggle > label").click(function(e) {
-
-		var parentSection 	= jQuery(this).parent(),
-			parentWrapper 	= jQuery(this).parents("div.toogle"),
-			previewPar 		= false,
-			isAccordion 	= parentWrapper.hasClass("toogle-accordion");
-
-		if(isAccordion && typeof(e.originalEvent) != "undefined") {
-			parentWrapper.find("div.toggle.active > label").trigger("click");
-		}
-
-		parentSection.toggleClass("active");
-
-		if(parentSection.find("> p").get(0)) {
-
-			previewPar 					= parentSection.find("> p");
-			var previewParCurrentHeight = previewPar.css("height");
-			var previewParAnimateHeight = previewPar.css("height");
-			previewPar.css("height", "auto");
-			previewPar.css("height", previewParCurrentHeight);
-
-		}
-
-		var toggleContent = parentSection.find("> div.toggle-content");
-
-		if(parentSection.hasClass("active")) {
-
-			jQuery(previewPar).animate({height: previewParAnimateHeight}, 350, function() {jQuery(this).addClass("preview-active");});
-			toggleContent.slideDown(350);
-
-		} else {
-
-			jQuery(previewPar).animate({height: previewParClosedHeight}, 350, function() {jQuery(this).removeClass("preview-active");});
-			toggleContent.slideUp(350);
-
-		}
-
-	});
-}
 

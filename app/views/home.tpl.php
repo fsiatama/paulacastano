@@ -1,231 +1,230 @@
-<?php
-
-$html_samples = '';
-
-foreach($arrSamples as $key => $data){
-	$html_samples .= '
-		<div class="ui360 ui360-vis float-none">
-			<a href="samples/mp3/'.$data["samples_archivo"].'">&nbsp;</a>
-			Sample '.$data["samples_id"].'<!-- - '.$data["samples_nombre"].'-->
-		</div>
-	';
-}
-
-?>
-
-
-<div id="nav" class="pageScrollerNav standardNav hidden-xs hidden-sm">
-	<ul>
-		<li class="active"><a href="#section-intro">&nbsp;</a></li>
-		<li><a href="#section-about">&nbsp;</a></li>
-		<li><a href="#section-contact">&nbsp;</a></li>
-		<li><a href="#section-terms">&nbsp;</a></li>
-	</ul>
+<!-- Preloader -->
+<div id="preloader">
+	<div id="load"></div>
 </div>
-<section id="section-intro" class="section intro clearfix text-center appear">
-	<div class="intro-body">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<img class="mar-top10" alt="Audiomu Logo" src="img/logo-home.png">
-					<h3 class="mar-top30 mar-bot30"><span class="txt-light">MÚSICA QUE ACOMPAÑA</span> TUS GRANDES IDEAS</h3>
 
-					<div class="page-scroll">
-						<p class="margin0">
-							<a class="link-slogan color-white" href="#section-about">
-								continua hacia abajo y descubre más<br/>sobre nosotros<br/><img alt="" src="img/btn-arrow-white.png">
-							</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
+<!-- Section: intro -->
+<section id="intro" class="intro">
+
+	<div class="slogan">
+		<a href="index.html"><img src="img/logo.png" alt="" /></a>
+	</div>
+	<div class="page-scroll">
+		<a href="#about">
+			<i class="fa fa-angle-down fa-5x animated"></i>
+		</a>
 	</div>
 </section>
-<!-- about -->
-<section id="section-about" class="section clearfix text-center">
-	<div class="about-section">
+<!-- /Section: intro -->
+
+<!-- Navigation -->
+<div id="navigation">
+	<nav class="navbar navbar-custom" role="navigation">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-10 col-xs-offset-1">
-					<p class="text-center">
-						Queremos contarte algo muy importante, aquí encontrarás música 
-						para acompañar tus proyectos audiovisuales y creativos y la podrás usar a 
-						través de una de nuestras Licencias, 
-						haz click en el link de música que encuentras en la barra 
-						superior para conocer los tipos de Licencias y precios.
-					</p>
-					<p class="text-center">
-						O si quieres más información sobre AudioMu <a href="<?= URL_RAIZ; ?>audiomu" class="">haz click aquí</a>
-						o en el enlace de arriba
-					</p>
-				</div>
-			</div><!-- row -->
-			<div class="row mar-top20">
-				<div class="col-sm-4 col-md-offset-1">
-					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/yuCUMAg2Qpc" frameborder="0" allowfullscreen></iframe>
+				<div class="col-md-12">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+							<i class="fa fa-bars"></i>
+						</button>
 					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="menu">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#intro">Home</a></li>
+							<li><a href="#about">About Me</a></li>
+							<li><a href="#gallery">My gallery</a></li>
+							<li><a href="#contact">Talk to me</a></li>
+						</ul>
+					</div>
+					<!-- /.Navbar-collapse -->
 				</div>
-				<div class="col-sm-2">
-					<h3 class="align-center">&nbsp;
-						<img alt="" class="img-responsive center-block" src="img/audiomu-music.png">
-					</h3>
+			</div>
+		</div>
+		<!-- /.container -->
+	</nav>
+</div>
+<!-- /Navigation -->
+
+<section id="about" class="home-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+
+				<div class="section-heading text-center">
+					<div class="wow bounceInDown" data-wow-delay="0.2s">
+						<h2>My name is Alice</h2>
+					</div>
+					<p class="wow bounceInUp" data-wow-delay="0.3s">I'm 28 years old from a village near Alpen mountain and I'm a spinster :(</p>
 				</div>
-				<div class="col-sm-4">
-					<p class="text-left">
-						Sí eres músico y quieres unirte a nuestra comunidad, 
-						promocionar y generar ingresos con tus obras
-					</p>
-					<p class="text-left">
-						<strong>preinscríbete para ser parte<br/>de los pioneros</strong>
-					</p>
-					<p class="text-left page-scroll appear">
-						<a href="<?= URL_RAIZ; ?>contacto" class="btn btn-warning btn-large">
-							<strong>¡Contactenos!</strong>
-						</a>
-					</p>
-				</div>
-			</div><!-- row -->
+
+			</div>
 		</div>
 	</div>
-</section>
-<!-- music -->
-<section id="section-music" class="section clearfix text-center">
-	<div class="music-section">
-		
-	</div>
-</section>
-<!-- contact -->
-<section id="section-contact" class="section clearfix text-center">
-	<div class="contact-section">
-		<div class="container">
-			<div class="row mar-top20">
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
-				<h3 class="align-center">&nbsp;
-					<img alt="" class="" src="img/audiomu-contact.png">
-				</h3>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img src="img/img1.jpg" class="img-responsive img-rounded" alt="" />
 			</div>
-			<div class="col-lg-2 col-md-2 hidden-xs hidden-sm appear">
-				<h3 class="align-center">&nbsp;
-					<img alt="" class="" src="img/audiomu-separator-vert-left.png">
-				</h3>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
-				<h3 class="orange mar-bot0">
-					Queremos invitarte<br/>a descargar
-				</h3>
-				<h1 class="">
-					Una muestra<br/>de samples<br/>musicales gratis
-				</h1>
-				<p class="mar-bot0">
-					Y para que los puedas usar, solo necesitas experimentar con nosotros el
-					trámite de una licencia y obvio,
-				</p>
-				<p class="soft-orange">
-					<strong>cualquier comentario sobre cómo te fue, es más que bienvenido.</strong>
-				</p>
-			</div>
-			</div><!-- row -->
-		</div>
-	</div>
-</section>
-<!-- terms -->
-<section id="section-terms" class="section clearfix text-center">
-	<div class="terms-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3 hidden-xs hidden-sm">
-					<p class="align-center">
-						<img alt="" class="" src="img/audiomu-separator-hrz-blue-lg.png">
-					</p>
-				</div>
-				<div class="col-md-8 col-md-offset-2">
-					<div id="sm2-container">
-						<!-- sm2 flash goes here -->
-					</div>
-					<div class="center-block">
-						<div class="sm2-inline-list">
-							<?= $html_samples; ?>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-md-offset-3 hidden-xs hidden-sm">
-					<p class="align-center mar-top20">
-						<img alt="" class="" src="img/audiomu-separator-hrz-blue-lg-down.png">
-					</p>
-				</div>
-			</div>
-			<div class="row mar-top20">
-			<div class="col-md-6 col-md-offset-3">
-				<p class="mar-top20 dark-blue appear">
-					Estos son los samples para que los escuches y los descargues con 
-					sus respectivas licencias, son una variedad interesante y algo de 
-					lo que será nuestra página en un futuro
-				</p>
-				<p class="">
-					<button id="audiomu-tutorial-modal-btn" type="button" data-toggle="modal" data-target="#audiomu-tutorial-modal" class="btn btn-link">
-						<i class="fa fa-play"></i> <strong>Video Tutorial</strong>
-					</button>
-				</p>
+			<div class="col-md-6">
+				<p><strong>You'll fall in love with me at the first sight</strong></p>
 				<p>
-					<button id="sample-download-modal-btn" type="button" class="btn btn-info btn-lg">
-						<i class="fa fa-download"></i> <strong>Descargar</strong>
-					</button>
+				Lorem ipsum dolor sit amet, ei purto tamquam ceteros his, eos in graece posidonium.
+				Ex nullam vidisse salutatus sed, ea persius phaedrum tincidunt vel. Option virtute nonumes ne est.
+				Id homero expetendis eam, dictas rationibus ut has.
 				</p>
-				<h4 class="mar-top20 soft-blue">
-					si quieres oír las canciones completas ingresa aquí
-				</h4>
-				<p class="">
-					<a href="<?= URL_RAIZ; ?>musica" class="btn btn-warning btn-lg">
-						<i class="fa fa-music"></i> <strong>Música</strong>
-					</a>
-				</p>
-				<h2 class="mar-top20 dark-blue">
-					Acuérdate que los samples estarán<br>solo por tiempo limitado
-				</h2>
-				<h2>
-					<span class="bg-orange pad-side10">así que aprovecha.</span>
-				</h2>
-				<p class="align-center mar-top40">
-					<img alt="" class="" src="img/audiomu-separator-hrz-blue.png">
-				</p>
-				 <p class="link-slogan dark-blue">
-					MÁS ADELANTE CONTAREMOS CON<br>MÁS TIPOS DE LICENCIAS,
-					<br><strong>MÁS MÚSICA</strong><br>Y MÁS CONTENIDO
-				</p>
-				<p class="align-center">
-					<img alt="" class="" src="img/audiomu-separator-hrz-blue-down.png">
-				</p>
-				<p class="link-slogan orange">
-					GRACIAS POR VISITARNOS.
-				</p>
-				<p class="align-center mar-top40">
-					<img alt="" class="" src="img/audiomu-cow.png">
-				</p>
+				<blockquote>
+				Pri pertinacia elaboraret te, an eirmod delicatissimi nec. Eu liber quodsi maiorum mei.
+				Civibus perfecto rationibus id his, est noster nostrud aliquando at.
+				</blockquote>
+				<a href="#gallery" class="btn btn-skin btn-lg btn-scroll">See my photos</a>
 			</div>
-			</div><!-- row -->
 		</div>
 	</div>
 </section>
+<!-- /Section: about -->
 
+<!-- Section: separator -->
+<section id="separator" class="home-section parallax text-center" data-stellar-background-ratio="0.5">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6 col-sm-3 col-md-3">
+				<div class="align-center txt-shadow">
+					<div class="icon">
+						<i class="fa fa-graduation-cap fa-5x"></i>
+					</div>
+				<span class="color-white">Bachelor of Design</span>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-3 col-md-3">
+				<div class="align-center txt-shadow">
+					<div class="icon">
+						<i class="fa fa-heart fa-5x"></i>
+					</div>
+				<span class="color-white">10x failed in love</span>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-3 col-md-3">
+				<div class="align-center txt-shadow">
+					<div class="icon">
+						<i class="fa fa-plane fa-5x"></i>
+					</div>
+				<span class="color-white">I love traveling</span>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-3 col-md-3">
+				<div class="align-center txt-shadow">
+					<div class="icon">
+						<i class="fa fa-camera fa-5x"></i>
+					</div>
+				<span class="color-white">I'm photographer</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /Section: separator -->
+<!-- Section: gallery -->
+<section id="gallery" class="home-section text-center bg-gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<div class="wow bounceInDown" data-wow-delay="0.4s">
+				<div class="section-heading">
+					<h2>My photo gallery</h2>
+					<p>Take a look at my personal moment, enjoy</p>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-<!-- Modal -->
-<div class="modal fade" id="audiomu-tutorial-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Tutorial para descargar samples en AudioMu</h4>
-      </div>
-      <div class="modal-body">
-      	<div class="embed-responsive embed-responsive-16by9">
-      		<iframe src=""></iframe>
-      	</div>
-      </div>
-      <div class="modal-footer margin-top0"><!-- modal footer -->
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12" >
+				<div class="wow bounceInUp" data-wow-delay="0.4s">
+				<div id="owl-works" class="owl-carousel">
+					<div class="item"><a href="img/gallery/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/1.jpg" class="img-responsive" alt="img"></a></div>
+					<div class="item"><a href="img/gallery/2.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/2.jpg" class="img-responsive " alt="img"></a></div>
+					<div class="item"><a href="img/gallery/3.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/3.jpg" class="img-responsive " alt="img"></a></div>
+					<div class="item"><a href="img/gallery/4.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/4.jpg" class="img-responsive " alt="img"></a></div>
+					<div class="item"><a href="img/gallery/5.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/5.jpg" class="img-responsive " alt="img"></a></div>
+					<div class="item"><a href="img/gallery/6.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/6.jpg" class="img-responsive " alt="img"></a></div>
+					<div class="item"><a href="img/gallery/7.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/7.jpg" class="img-responsive " alt="img"></a></div>
+					<div class="item"><a href="img/gallery/8.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/8.jpg" class="img-responsive " alt="img"></a></div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /Section: services -->
+
+<!-- Section: contact -->
+<section id="contact" class="home-section text-center">
+	<div class="heading-contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-offset-2">
+
+					<div class="section-heading">
+					<div class="wow bounceInDown" data-wow-delay="0.4s">
+					<h2>Email or phone are welcome</h2>
+					</div>
+					<p class="wow lightSpeedIn" data-wow-delay="0.3s">Gentleman, introduce your self and get in touch with me privately</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+
+		<div class="row">
+			<div class="col-lg-8 col-md-offset-2">
+				<div class="form-wrapper marginbot-50">
+					<form id="contact-form">
+						<div class="row">
+
+							<div class="form-group">
+								<label for="name">
+									Name</label>
+								<input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+							</div>
+							<div class="form-group">
+								<label for="email">
+									Email Address</label>
+									<input type="email" class="form-control" id="email" placeholder="Enter email" required="required" />
+							</div>
+							<div class="form-group">
+								<label for="subject">
+									Subject</label>
+								<select id="subject" name="subject" class="form-control" required="required">
+									<option value="na" selected="">Choose One:</option>
+									<option value="service">Friendship request</option>
+									<option value="suggestions">Wanna marry you</option>
+									<option value="product">Prom night invitation</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="name">
+									Message</label>
+								<textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+									placeholder="Message"></textarea>
+							</div>
+							<button type="submit" class="btn btn-skin btn-block" id="btnContactUs">
+								Send Message
+							</button>
+						</div>
+					</form>
+				</div>
+				<div class="text-center">
+					<p class="lead"><i class="fa fa-phone"></i> Call me +1 888 9796 88</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /Section: contact -->

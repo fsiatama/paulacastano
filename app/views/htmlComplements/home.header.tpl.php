@@ -19,9 +19,3 @@
 <meta property="og:image:height" content="313">
 <meta property="twitter:title" content="Música que acompaña tus grandes ideas" />
 <meta property="twitter:description" content="En AudioMu.com encontraras Licencias de uso de música para productos audiovisuales y creativos, ofrecidas por sus autores y todo a través de nuestro portal web." />
-
-<!-- soundManager.useFlashBlock: related CSS -->
-<link rel="stylesheet" href="<?= URL_RAIZ; ?>js/vendor/soundmanager/flashblock/flashblock.css">
-<!-- required -->
-<link rel="stylesheet" href="<?= URL_RAIZ; ?>js/vendor/soundmanager/360-player/360player.css">
-<link rel="stylesheet" href="<?= URL_RAIZ; ?>js/vendor/soundmanager/360-player/360player-visualization.css" />
