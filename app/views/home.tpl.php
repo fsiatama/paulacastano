@@ -32,10 +32,10 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="menu">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="#intro">Home</a></li>
-							<li><a href="#about">About Me</a></li>
-							<li><a href="#gallery">My gallery</a></li>
-							<li><a href="#contact">Talk to me</a></li>
+							<li class="active"><a href="#intro"><?= Lang::get('navbar.menu.home'); ?></a></li>
+							<li><a href="#about"><?= Lang::get('navbar.menu.about'); ?></a></li>
+							<li><a href="#gallery"><?= Lang::get('navbar.menu.gallery'); ?></a></li>
+							<li><a href="#contact"><?= Lang::get('navbar.menu.contact'); ?></a></li>
 						</ul>
 					</div>
 					<!-- /.Navbar-collapse -->
@@ -54,9 +54,9 @@
 
 				<div class="section-heading text-center">
 					<div class="wow bounceInDown" data-wow-delay="0.2s">
-						<h2>My name is Alice</h2>
+						<h2><?= Lang::get('about.title'); ?></h2>
 					</div>
-					<p class="wow bounceInUp" data-wow-delay="0.3s">I'm 28 years old from a village near Alpen mountain and I'm a spinster :(</p>
+					<p class="wow bounceInUp" data-wow-delay="0.3s"><?= Lang::get('about.subtitle'); ?></p>
 				</div>
 
 			</div>
@@ -66,20 +66,17 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<img src="img/img1.jpg" class="img-responsive img-rounded" alt="" />
+				<img src="img/biografia-paula-castano.jpg" class="img-responsive img-rounded center-block" alt="biografia paula castano" />
 			</div>
 			<div class="col-md-6">
-				<p><strong>You'll fall in love with me at the first sight</strong></p>
+				<p><strong><?= Lang::get('about.phrase1'); ?></strong> <small><?= Lang::get('about.phrase2'); ?></small></p>
 				<p>
-				Lorem ipsum dolor sit amet, ei purto tamquam ceteros his, eos in graece posidonium.
-				Ex nullam vidisse salutatus sed, ea persius phaedrum tincidunt vel. Option virtute nonumes ne est.
-				Id homero expetendis eam, dictas rationibus ut has.
+					<?= Lang::get('about.paragraph1'); ?>
 				</p>
 				<blockquote>
-				Pri pertinacia elaboraret te, an eirmod delicatissimi nec. Eu liber quodsi maiorum mei.
-				Civibus perfecto rationibus id his, est noster nostrud aliquando at.
+					<?= Lang::get('about.paragraph2'); ?>
 				</blockquote>
-				<a href="#gallery" class="btn btn-skin btn-lg btn-scroll">See my photos</a>
+				<a href="#gallery" class="btn btn-skin btn-lg btn-scroll"><?= Lang::get('gallery.seeGallery'); ?></a>
 			</div>
 		</div>
 	</div>
@@ -91,36 +88,36 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-6 col-sm-3 col-md-3">
-				<div class="align-center txt-shadow">
+				<a href="https://instagram.com/paulacastanoart" target="_blank" class="align-center">
 					<div class="icon">
-						<i class="fa fa-graduation-cap fa-5x"></i>
+						<i class="fa fa-instagram fa-5x"></i>
 					</div>
-				<span class="color-white">Bachelor of Design</span>
-				</div>
+					<span class="color-white">@paulacastanoart</span>
+				</a>
 			</div>
 			<div class="col-xs-6 col-sm-3 col-md-3">
-				<div class="align-center txt-shadow">
+				<a href="https://www.facebook.com/paula.castano2" target="_blank" class="align-center">
 					<div class="icon">
-						<i class="fa fa-heart fa-5x"></i>
+						<i class="fa fa-facebook fa-5x"></i>
 					</div>
-				<span class="color-white">10x failed in love</span>
-				</div>
+					<span class="color-white">/paula.castano2</span>
+				</a>
 			</div>
 			<div class="col-xs-6 col-sm-3 col-md-3">
-				<div class="align-center txt-shadow">
+				<a href="https://instagram.com/paulacastanoart" target="_blank" class="align-center">
 					<div class="icon">
-						<i class="fa fa-plane fa-5x"></i>
+						<i class="fa fa-flickr fa-5x"></i>
 					</div>
-				<span class="color-white">I love traveling</span>
-				</div>
+					<span class="color-white">@paulacastanoart</span>
+				</a>
 			</div>
 			<div class="col-xs-6 col-sm-3 col-md-3">
-				<div class="align-center txt-shadow">
+				<a href="mailto:" class="align-center">
 					<div class="icon">
-						<i class="fa fa-camera fa-5x"></i>
+						<i class="fa fa-envelope-o fa-5x"></i>
 					</div>
-				<span class="color-white">I'm photographer</span>
-				</div>
+					<span class="color-white">arte@paulacastano.com</span>
+				</a>
 			</div>
 		</div>
 	</div>
