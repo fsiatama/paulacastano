@@ -7,7 +7,12 @@
 <section id="intro" class="intro">
 
 	<div class="slogan">
-		<a href="index.html"><img src="img/logo.png" alt="" /></a>
+		<h1>
+			PAULA CASTAÑO - ARTRISTA PLASTICA
+			<a href="index.html">
+				<i class="icon-signature"></i>
+			</a>
+		</h1>
 	</div>
 	<div class="page-scroll">
 		<a href="#about">
