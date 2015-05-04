@@ -109,7 +109,7 @@
 				</a>
 			</div>
 			<div class="col-xs-6 col-sm-3 col-md-3">
-				<a href="https://instagram.com/paulacastanoart" target="_blank" class="align-center">
+				<a href="https://www.flickr.com/people/132809091@N04/" target="_blank" class="align-center">
 					<div class="icon">
 						<i class="fa fa-flickr fa-5x"></i>
 					</div>
@@ -135,8 +135,8 @@
 			<div class="col-lg-8 col-lg-offset-2">
 				<div class="wow bounceInDown" data-wow-delay="0.4s">
 				<div class="section-heading">
-					<h2>My photo gallery</h2>
-					<p>Take a look at my personal moment, enjoy</p>
+					<h2><?= Lang::get('gallery.title'); ?></h2>
+					<p><?= Lang::get('gallery.subtitle'); ?></p>
 				</div>
 				</div>
 			</div>
@@ -147,16 +147,7 @@
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12" >
 				<div class="wow bounceInUp" data-wow-delay="0.4s">
-				<div id="owl-works" class="owl-carousel">
-					<div class="item"><a href="img/gallery/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/1.jpg" class="img-responsive" alt="img"></a></div>
-					<div class="item"><a href="img/gallery/2.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/2.jpg" class="img-responsive " alt="img"></a></div>
-					<div class="item"><a href="img/gallery/3.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/3.jpg" class="img-responsive " alt="img"></a></div>
-					<div class="item"><a href="img/gallery/4.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/4.jpg" class="img-responsive " alt="img"></a></div>
-					<div class="item"><a href="img/gallery/5.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/5.jpg" class="img-responsive " alt="img"></a></div>
-					<div class="item"><a href="img/gallery/6.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/6.jpg" class="img-responsive " alt="img"></a></div>
-					<div class="item"><a href="img/gallery/7.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/7.jpg" class="img-responsive " alt="img"></a></div>
-					<div class="item"><a href="img/gallery/8.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/8.jpg" class="img-responsive " alt="img"></a></div>
-				</div>
+					 <div id="paulacastano-gallery"></div>
 				</div>
 			</div>
 		</div>
@@ -173,9 +164,11 @@
 
 					<div class="section-heading">
 					<div class="wow bounceInDown" data-wow-delay="0.4s">
-					<h2>Email or phone are welcome</h2>
+					<h2><?= Lang::get('contact.title'); ?></h2>
 					</div>
-					<p class="wow lightSpeedIn" data-wow-delay="0.3s">Gentleman, introduce your self and get in touch with me privately</p>
+					<p class="wow lightSpeedIn" data-wow-delay="0.3s">
+						<?= Lang::get('contact.subtitle'); ?>
+					</p>
 					</div>
 
 				</div>
@@ -192,39 +185,43 @@
 
 							<div class="form-group">
 								<label for="name">
-									Name</label>
-								<input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+									<?= Lang::get('contact.name'); ?>
+								</label>
+								<input type="text" class="form-control" id="name" placeholder="<?= Lang::get('contact.name_holder'); ?>" required="required" />
 							</div>
 							<div class="form-group">
 								<label for="email">
-									Email Address</label>
-									<input type="email" class="form-control" id="email" placeholder="Enter email" required="required" />
+									<?= Lang::get('contact.email'); ?>
+								</label>
+									<input type="email" class="form-control" id="email" placeholder="<?= Lang::get('contact.email_holder'); ?>" required="required" />
 							</div>
-							<div class="form-group">
+							<!-- <div class="form-group">
 								<label for="subject">
-									Subject</label>
+									<?= Lang::get('contact.subject'); ?>
+								</label>
 								<select id="subject" name="subject" class="form-control" required="required">
 									<option value="na" selected="">Choose One:</option>
 									<option value="service">Friendship request</option>
 									<option value="suggestions">Wanna marry you</option>
 									<option value="product">Prom night invitation</option>
 								</select>
-							</div>
+							</div> -->
 							<div class="form-group">
 								<label for="name">
-									Message</label>
+									<?= Lang::get('contact.message'); ?>
+								</label>
 								<textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
-									placeholder="Message"></textarea>
+									placeholder="<?= Lang::get('contact.message'); ?>"></textarea>
 							</div>
 							<button type="submit" class="btn btn-skin btn-block" id="btnContactUs">
-								Send Message
+								<?= Lang::get('contact.send'); ?>
 							</button>
 						</div>
 					</form>
 				</div>
-				<div class="text-center">
+				<!-- <div class="text-center">
 					<p class="lead"><i class="fa fa-phone"></i> Call me +1 888 9796 88</p>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>

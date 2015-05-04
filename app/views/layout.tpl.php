@@ -33,7 +33,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 col-lg-12">
-						<p>&copy;Copyright 2014 . Alice Lonely . design by <a href="">Bootstraptaste</a></p>
+						<p>&copy;Copyright 2015 . Paula Castaño</p>
 					</div>
 				</div>	
 			</div>
