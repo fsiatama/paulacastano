@@ -48,7 +48,7 @@ jQuery(function($) {
 		paginationDots: true,
 		breadcrumbAutoHideTopLevel:true,
 		locationHash:false,
-		/*thumbnailL1Width:'240C xs100C sm100C', thumbnailL1Height:'160C xs100C sm100C',
+		thumbnailL1Width:'240C xs100C sm100C', thumbnailL1Height:'160C xs100C sm100C',
 		thumbnailWidth:'auto', thumbnailHeight:'200 xs80 sm150 la250 xl290',
 		viewerDisplayLogo:true,
 		photoSorting:'random',
@@ -57,7 +57,7 @@ jQuery(function($) {
 		galleryToolbarWidthAligned:false,
 		galleryFullpageButton:true,
 		supportIE8: false,
-		*/
+		/**/
 	});
 	
 	//owl carousel

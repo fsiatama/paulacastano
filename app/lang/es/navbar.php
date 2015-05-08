@@ -2,7 +2,7 @@
 return [
 	'menu' => [
 		'home'    => 'Inicio',
-		'about'   => 'Quien Soy',
+		'about'   => 'Biografía',
 		'gallery' => 'Mi Galería',
 		'contact' => 'Contactame'
 	]

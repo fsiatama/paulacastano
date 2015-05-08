@@ -121,7 +121,7 @@
 					<div class="icon">
 						<i class="fa fa-envelope-o fa-5x"></i>
 					</div>
-					<span class="color-white">arte@paulacastano.com</span>
+					<span class="color-white">contacto@paulacastano.com</span>
 				</a>
 			</div>
 		</div>
