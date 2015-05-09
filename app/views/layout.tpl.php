@@ -39,6 +39,52 @@
 			</div>
 		</footer>
 
+		<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+
+					<div class="modal-header"><!-- modal header -->
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="errorModalLabel"><i class="fa fa-warning"></i>  Error!</h4>
+					</div><!-- /modal header -->
+
+					<!-- modal body -->
+					<div class="modal-body">
+						<div id="modal-error-msg" class="alert alert-danger margin-bottom0">
+						</div>
+					</div>
+					<!-- /modal body -->
+
+					<div class="modal-footer margin-top0"><!-- modal footer -->
+						<button class="btn btn-skin" data-dismiss="modal">Cerrar</button>
+					</div><!-- /modal footer -->
+
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="sucessModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+
+					<div class="modal-header"><!-- modal header -->
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="successModalLabel"><i class="fa fa-check"></i>  Success!</h4>
+					</div><!-- /modal header -->
+
+					<div class="modal-body"><!-- modal body -->
+						<div id="modal-success-msg" class="alert alert-success margin-bottom0">
+						</div>
+					</div><!-- /modal body -->
+
+					<div class="modal-footer margin-top0"><!-- modal footer -->
+						<button class="btn btn-skin" data-dismiss="modal">Cerrar</button>
+					</div><!-- /modal footer -->
+
+				</div>
+			</div>
+		</div>
+
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>

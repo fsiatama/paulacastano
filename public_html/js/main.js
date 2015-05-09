@@ -1,12 +1,18 @@
 jQuery(function($) {
-	
+
+	$(document).ajaxStart(function(){
+		$.blockUI({ message: '<h4 class="margintop-10 marginbot-10"><i class="fa fa-spinner fa-spin"></i> Espere por favor</h4 class= "nomargin">' });
+	}).ajaxComplete(function() {
+		$.unblockUI();
+	});
+
 	new WOW().init();
-	
+
 	$(window).load(function(){
 	  $("#navigation").sticky({ topSpacing: 0 });
 	});
 
-	jQuery(window).load(function() { 
+	jQuery(window).load(function() {
 		jQuery("#preloader").delay(100).fadeOut("slow");
 		jQuery("#load").delay(100).fadeOut("slow");
 	});
@@ -59,34 +65,7 @@ jQuery(function($) {
 		supportIE8: false,
 		/**/
 	});
-	
-	//owl carousel
-	/*$('#owl-works').owlCarousel({
-		items : 4,
-		itemsDesktop : [1199,5],
-		itemsDesktopSmall : [980,5],
-		itemsTablet: [768,5],
-		itemsTabletSmall: [550,2],
-		itemsMobile : [480,2],
-	});*/
-	
-	//nivo lightbox
-	/*$('.owl-carousel .item a').nivoLightbox({
-		effect: 'fadeScale',                             // The effect to use when showing the lightbox
-		theme: 'default',                           // The lightbox theme to use
-		keyboardNav: true,                          // Enable/Disable keyboard navigation (left/right/escape)
-		clickOverlayToClose: true,                  // If false clicking the "close" button will be the only way to close the lightbox
-		onInit: function(){},                       // Callback when lightbox has loaded
-		beforeShowLightbox: function(){},           // Callback before the lightbox is shown
-		afterShowLightbox: function(lightbox){},    // Callback after the lightbox is shown
-		beforeHideLightbox: function(){},           // Callback before the lightbox is hidden
-		afterHideLightbox: function(){},            // Callback after the lightbox is hidden
-		onPrev: function(element){},                // Callback when the lightbox gallery goes to previous item
-		onNext: function(element){},                // Callback when the lightbox gallery goes to next item
-		errorMessage: 'The requested content cannot be loaded. Please try again later.' // Error message when content can't be loaded
-	});*/
-	
-	
+
 	//parallax
 	if ($('.parallax').length)
 	{
@@ -98,8 +77,32 @@ jQuery(function($) {
 			horizontalOffset: 0,
 			verticalOffset: 0
 		});
+	}
 
-	}	
-
+	$('#contactForm').on('submit', function(event){
+		var $form = $(this);
+		var $btn = $('#contactFormSubmit');
+		//$btn.button('loading');
+		$.ajax({
+			type:"POST"
+			,url:"contact/form"
+			,data:$form.serialize()
+			,dataType:"json"
+			,success:function(data){
+				if(data.success){
+					$("#modal-success-msg").html(data.msg);
+					$('#sucessModal').modal('show');
+					$form[0].reset();
+				} else {
+					$('#modal-error-msg').html(data.error);
+					$('#errorModal').modal('show');
+				}
+			}
+		}).always(function(){
+			//$btn.button('reset');
+		});
+	
+		event.preventDefault();
+	});
 });
 

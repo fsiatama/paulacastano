@@ -315,6 +315,10 @@ hr
 {
 	margin-bottom:10px!important
 }
+.margintop-10
+{
+	margin-top:10px!important
+}
 
 .marginbot-20
 {
@@ -485,7 +489,7 @@ hr
 	border-radius:6px
 }
 
-form#contact-form .form-group label
+form#contactForm .form-group label
 {
 	text-align:left!important;
 	display:block;
@@ -493,7 +497,7 @@ form#contact-form .form-group label
 	font-size:16px
 }
 
-form#contact-form input,form#contact-form select,form#contact-form textarea
+form#contactForm input,form#contactForm select,form#contactForm textarea
 {
 	border-radius:4px;
 	border:1px solid #eee;
@@ -505,12 +509,12 @@ form#contact-form input,form#contact-form select,form#contact-form textarea
 	color:#888
 }
 
-form#contact-form input,form#contact-form select
+form#contactForm input,form#contactForm select
 {
 	height:40px
 }
 
-form#contact-form button
+form#contactForm button
 {
 	border-radius:4px;
 	height:40px;
@@ -519,7 +523,7 @@ form#contact-form button
 	font-weight:700
 }
 
-form#contact-form input:focus,form#contact-form select:focus,form#contact-form textarea:focus
+form#contactForm input:focus,form#contactForm select:focus,form#contactForm textarea:focus
 {
 	-webkit-box-shadow:0 1px 2px rgba(0,0,0,.05);
 	box-shadow:0 1px 2px rgba(0,0,0,.05);
@@ -733,7 +737,7 @@ ul.nav li a:hover {
 	background: #d43076;
 }
 
-form#contact-form input:focus,form#contact-form select:focus,form#contact-form textarea:focus {
+form#contactForm input:focus,form#contactForm select:focus,form#contactForm textarea:focus {
 	border-color: #d43076;
 }
 

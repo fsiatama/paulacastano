@@ -181,20 +181,20 @@
 		<div class="row">
 			<div class="col-lg-8 col-md-offset-2">
 				<div class="form-wrapper marginbot-50">
-					<form id="contact-form">
+					<form id="contactForm">
 						<div class="row">
 
 							<div class="form-group">
 								<label for="name">
 									<?= Lang::get('contact.name'); ?>
 								</label>
-								<input type="text" class="form-control" id="name" placeholder="<?= Lang::get('contact.name_holder'); ?>" required="required" />
+								<input type="text" class="form-control" name="name" id="name" placeholder="<?= Lang::get('contact.name_holder'); ?>" required="required" />
 							</div>
 							<div class="form-group">
 								<label for="email">
 									<?= Lang::get('contact.email'); ?>
 								</label>
-									<input type="email" class="form-control" id="email" placeholder="<?= Lang::get('contact.email_holder'); ?>" required="required" />
+									<input type="email" class="form-control" id="email" name="email" placeholder="<?= Lang::get('contact.email_holder'); ?>" required="required" />
 							</div>
 							<!-- <div class="form-group">
 								<label for="subject">
@@ -214,7 +214,7 @@
 								<textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
 									placeholder="<?= Lang::get('contact.message'); ?>"></textarea>
 							</div>
-							<button type="submit" class="btn btn-skin btn-block" id="btnContactUs">
+							<button type="submit" class="btn btn-skin btn-block" id="contactFormSubmit">
 								<?= Lang::get('contact.send'); ?>
 							</button>
 						</div>
