@@ -23,7 +23,7 @@ class ContactRepo {
 		$email       = Inflector::cleanInputEmail($email);
 
 		$arrEmail = [
-			[ 'email' => 'contactenos@paulacastano.com', 'name' => 'Contactenos paulacastano.com' ],
+			[ 'email' => 'contacto@paulacastano.com', 'name' => 'Contactenos paulacastano.com' ],
 			[ 'email' => 'fas0980@gmail.com', 'name' => 'Fabian Siatama' ],
 		];
 
