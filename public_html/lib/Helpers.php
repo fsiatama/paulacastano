@@ -528,7 +528,7 @@ class Helpers
 		$mail->Port = 25;
 
 		//Whether to use SMTP authentication
-		$mail->SMTPAuth = false;
+		$mail->SMTPAuth = true;
 
 		$mail->Username = 'contacto@paulacastano.com';
 		
