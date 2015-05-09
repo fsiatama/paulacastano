@@ -2,4 +2,5 @@
 !/public_html
 !/app
 !/.gitignore
-!/.README.md
+!/.composer.json
+!/.composer.lock
