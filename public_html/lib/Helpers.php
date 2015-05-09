@@ -205,77 +205,6 @@ class Helpers
 
 
 		return $arr_chart;
-
-
-
-
-
-
-
-
-
-		$origCampo    = false;
-		$arr_tmp2     = array();
-
-
-		foreach ($arr_data as $data) {
-			$arr_tmp['data'] = [];
-
-			$seriesname = '';
-
-			foreach ($data as $key => $valor) {
-
-				$nombre_columna = $key;
-
-				if ($origCampo) {
-					$nombre_columna = $origCampo['nombre'];
-				}
-
-				$tooltext = $data[$eje_x];
-				if ($key == $eje_x) {
-					$seriesname = $valor;
-					$arr_tmp2['categorias']['category'][] = ['label' => $valor];
-				} else {
-					//var_dump($key, $filas);
-					if (!in_array($key, $filas)) {
-
-						$arr_cols[$key]                      = $key;
-						$arr_tmp['data'][]                   = ['value' => $valor, 'tooltext' => $tooltext, 'label' => $nombre_columna];
-						$arr_tmp2['data'][$nombre_columna][] = ['value' => $valor, 'tooltext' => $valor, 'label' => $tooltext];
-					}
-				}
-			}
-			$arr_chart['dataset'][] = ['seriesname' => $seriesname, 'data' => $arr_tmp['data'] ];
-		}
-		//print_r($arr_tmp2['categorias']);
-		//var_dump($arr_cols);
-
-		foreach ($arr_cols as $key => $data) {
-
-			$arr_tmp['categorias']['category'][] = [ 'label' => $data ];
-
-		}
-
-		if((($typeChart == LINEAL || $typeChart == AREA) && count($arr_cols) <= 2) || $typeChart == PIE ){
-
-			$arr_chart['categories'] = array_merge( $arr_tmp2['categorias'], ['font' => 'Arial','fontsize' => '8', 'fontcolor' => '000000'] );
-
-			$arr_chart['dataset'] = [];
-
-			foreach ($arr_tmp2['data'] as $key => $data) {
-				$arr_chart['dataset'][] = ['seriesname'=>$key, 'data'=>$data];
-			}
-		} else{
-			$arr_chart['categories'] = array_merge( $arr_tmp['categorias'], ['font' => 'Arial','fontsize' => '8', 'fontcolor' => '000000'] );
-		}
-		if ($serie_adicional && is_array($serie_adicional)) {
-			$arr_chart['dataset'][] = $serie_adicional;
-		}
-
-
-
-		//print_r($arr_chart);
-		return $arr_chart;
 	}
 
 	public static function getPeriodColumnSql($period, $withPeriodName = true, $fieldPeriodName = '')
@@ -566,6 +495,87 @@ class Helpers
 		$value = floatval($value);
 		$result = ($value == 0) ? 0 : log($value) ;
 		return $result;
+	}
+
+	/**
+     * sendEmail
+     * 
+     * @param mixed \array [ 'email' => 'ppp@domain.com', 'name' => 'Jhon Doe' ].
+     * @param mixed $message       Description.
+     * @param mixed $subject       Description.
+     * @param mixed \array $arrAttachedFile  ['file1', 'file2', ....].
+     *
+     * @access public
+     * @static
+     *
+     * @return mixed Value.
+     */
+	public static function sendEmail(array $arrEmail , $message, $subject, array $arrAttachedFile = [])
+	{
+		$mail = new PHPMailer;
+
+		$mail->isSMTP();
+		//Enable SMTP debugging
+		// 0 = off (for production use)
+		// 1 = client messages
+		// 2 = client and server messages
+		$mail->SMTPDebug = 0;
+		//Ask for HTML-friendly debug output
+		$mail->Debugoutput = 'html';
+		//Set the hostname of the mail server
+		$mail->Host = 'relay-hosting.secureserver.net';
+		//Set the SMTP port number - likely to be 25, 465 or 587
+		$mail->Port = 25;
+
+		//Whether to use SMTP authentication
+		$mail->SMTPAuth = false;
+
+		$mail->Username = 'contacto@paulacastano.com';
+		
+		$mail->Password = 'P4ul4C4st4no';
+
+		//Set who the message is to be sent from
+		$mail->setFrom('contacto@paulacastano.com', 'Paula Castano.');
+		//Set an alternative reply-to address
+		//$mail->addReplyTo('replyto@example.com', 'First Last');
+		//Set who the message is to be sent to
+		foreach ($arrEmail as $key => $row) {
+
+			if ( !empty($row['email']) ) {
+				
+				$name = ( ! empty($row['name'] ) ) ? $row['name'] : '' ;
+
+				$mail->addAddress($row['email'], $name);
+			}
+		}
+		//Set the subject line
+		$mail->Subject = $subject;
+		//Read an HTML message body from an external file, convert referenced images to embedded,
+		//convert HTML into a basic plain-text alternative body
+		$mail->msgHTML($message);
+		//Replace the plain text body with one created manually
+		//$mail->AltBody = 'This is a plain-text message body';
+		//Attach an image file
+		foreach ($arrAttachedFile as $file) {
+			if(is_file($file)){
+				$mail->addAttachment($file);
+			}
+		}
+		//activar utf8 para acentos
+		$mail->CharSet = "UTF-8";
+		//$mail->Encoding = "quotedprintable";
+		
+		//send the message, check for errors
+		if (!$mail->send()){
+			return [
+				'success' => false,
+				'error'   => 'Mailer Error: ' . $mail->ErrorInfo
+			];
+		}
+		
+		return [
+			'success' => true
+		];
 	}
 
 }

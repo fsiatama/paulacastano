@@ -92,7 +92,7 @@
 <section id="separator" class="home-section parallax text-center" data-stellar-background-ratio="0.5">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-6 col-sm-3 col-md-3">
+			<div class="col-sm-6 col-md-3 marginbot-20">
 				<a href="https://instagram.com/paulacastanoart" target="_blank" class="align-center">
 					<div class="icon">
 						<i class="fa fa-instagram fa-5x"></i>
@@ -100,7 +100,7 @@
 					<span class="color-white">@paulacastanoart</span>
 				</a>
 			</div>
-			<div class="col-xs-6 col-sm-3 col-md-3">
+			<div class="col-sm-6 col-md-3 marginbot-20">
 				<a href="https://www.facebook.com/paula.castano2" target="_blank" class="align-center">
 					<div class="icon">
 						<i class="fa fa-facebook fa-5x"></i>
@@ -108,7 +108,7 @@
 					<span class="color-white">/paula.castano2</span>
 				</a>
 			</div>
-			<div class="col-xs-6 col-sm-3 col-md-3">
+			<div class="col-sm-6 col-md-3 marginbot-20">
 				<a href="https://www.flickr.com/people/132809091@N04/" target="_blank" class="align-center">
 					<div class="icon">
 						<i class="fa fa-flickr fa-5x"></i>
@@ -116,8 +116,8 @@
 					<span class="color-white">@paulacastanoart</span>
 				</a>
 			</div>
-			<div class="col-xs-6 col-sm-3 col-md-3">
-				<a href="mailto:" class="align-center">
+			<div class="col-sm-6 col-md-3 marginbot-20">
+				<a href="mailto:contacto@paulacastano.com" class="align-center">
 					<div class="icon">
 						<i class="fa fa-envelope-o fa-5x"></i>
 					</div>
@@ -128,6 +128,7 @@
 	</div>
 </section>
 <!-- /Section: separator -->
+
 <!-- Section: gallery -->
 <section id="gallery" class="home-section text-center bg-gray">
 	<div class="container">
