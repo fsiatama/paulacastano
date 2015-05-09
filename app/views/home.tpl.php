@@ -9,7 +9,7 @@
 	<div class="slogan">
 		<h1>
 			PAULA CASTAÑO - ARTRISTA PLASTICA
-			<a href="index.html">
+			<a href="<?= URL_RAIZ; ?>">
 				<i class="icon-signature"></i>
 			</a>
 		</h1>
