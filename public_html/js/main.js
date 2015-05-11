@@ -39,7 +39,7 @@ jQuery(function($) {
 	$("#paulacastano-gallery").nanoGallery({
 		kind: 'flickr',
 		userID: '132809091@N04',
-		thumbnailHoverEffect:[{'name':'imageScale150', 'duration':700},{'name':'labelAppear75', 'duration':400},{'name':'descriptionAppear', 'duration':1000}],
+		thumbnailHoverEffect:[{'name':'labelAppear75', 'duration':400},{'name':'descriptionAppear', 'duration':1000}],
 		thumbnailLabel:{display:false,align:'center', position:'overImageOnMiddle'},
 		thumbnailL1Label:{display:true,align:'center', position:'overImageOnMiddle'},
 		touchAnimationL1: true,
@@ -62,6 +62,8 @@ jQuery(function($) {
 		imageTransition : 'slide',
 		galleryToolbarWidthAligned:false,
 		galleryFullpageButton:true,
+		colorScheme:'light',
+		backgroundColor: 'light',
 		supportIE8: false,
 		/**/
 	});

@@ -1,6 +1,6 @@
 <?php
 return [
-	'title' => 'MI BIOGRAFIA &quot;Paula Castaño&quot;',
+	'title' => 'Paula Castaño',
 	'subtitle' => 'Mercadeo y Publicidad, es mi profesión, arte es mi pasión.',
 	'phrase1' => 'Soy colombiana con base en Bogotá',
 	'phrase2' => 'Inspirada en el poder del color.',

@@ -26,7 +26,7 @@ body
 	height:100%;
 	font-family:'Open Sans',sans-serif;
 	font-weight:400;
-	color:#888;
+	/* color:#888; */
 	font-size:16px;
 	line-height:1.6em;
 	background-color:#fff
@@ -342,8 +342,8 @@ hr
 
 .home-section
 {
-	padding-top:120px;
-	padding-bottom:110px;
+	padding-top:60px;
+	padding-bottom:55px;
 	display:block;
 	position:relative;
 	z-index:120
@@ -388,7 +388,7 @@ hr
 
 .intro
 {
-	background: url(../img/bg2.jpg) no-repeat top center fixed; 
+	background: url(../img/bg2.jpg) no-repeat top right fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -415,9 +415,10 @@ hr
 .intro .slogan h1{
 	margin: 10px 0;
 	font-size: 1.5em;
+	color: #333;
 }
 .intro .slogan h1 a{
-	color: #444;
+	color: #333;
 	font-size: 1.8em;
 	margin: 0 0 0 20px;
 }
@@ -553,7 +554,8 @@ footer a:hover
 
 #separator
 {
-	background-image:url(../img/parallax-bg.jpg)
+	/* background-image:url(../img/parallax-bg.jpg); */
+	background-color: #111;
 }
 
 #separator .icon
@@ -566,7 +568,7 @@ footer a:hover
 	color:#fff
 }
 
-#separator:after
+/* #separator:after
 {
 	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWNgYGD4z0AswK4SAFXuAf8EPy+xAAAAAElFTkSuQmCC);
 	content:"";
@@ -577,7 +579,7 @@ footer a:hover
 	top:0;
 	opacity:.7;
 	z-index:-1
-}
+} */
 
 .btn
 {
@@ -749,6 +751,13 @@ footer {
   color: #fff;
   background-color: #d43076;
   border-color: #d43076;
+}
+
+@media (min-width:1200px) {
+	#intro.intro
+	{
+		padding:600px 0 150px
+	}
 }
 
 

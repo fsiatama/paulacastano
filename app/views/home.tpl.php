@@ -78,10 +78,10 @@
 				<p>
 					<?= Lang::get('about.paragraph1'); ?>
 				</p>
-				<blockquote>
+				<p>
 					<?= Lang::get('about.paragraph2'); ?>
-				</blockquote>
-				<a href="#gallery" class="btn btn-skin btn-lg btn-scroll"><?= Lang::get('gallery.seeGallery'); ?></a>
+				</p>
+				<a href="#gallery" class="btn btn-skin btn-scroll"><?= Lang::get('gallery.seeGallery'); ?></a>
 			</div>
 		</div>
 	</div>
@@ -95,7 +95,7 @@
 			<div class="col-sm-6 col-md-3 marginbot-20">
 				<a href="https://instagram.com/paulacastanoart" target="_blank" class="align-center">
 					<div class="icon">
-						<i class="fa fa-instagram fa-5x"></i>
+						<i class="fa fa-instagram fa-3x"></i>
 					</div>
 					<span class="color-white">@paulacastanoart</span>
 				</a>
@@ -103,7 +103,7 @@
 			<div class="col-sm-6 col-md-3 marginbot-20">
 				<a href="https://www.facebook.com/paula.castano2" target="_blank" class="align-center">
 					<div class="icon">
-						<i class="fa fa-facebook fa-5x"></i>
+						<i class="fa fa-facebook fa-3x"></i>
 					</div>
 					<span class="color-white">/paula.castano2</span>
 				</a>
@@ -111,7 +111,7 @@
 			<div class="col-sm-6 col-md-3 marginbot-20">
 				<a href="https://www.flickr.com/people/132809091@N04/" target="_blank" class="align-center">
 					<div class="icon">
-						<i class="fa fa-flickr fa-5x"></i>
+						<i class="fa fa-flickr fa-3x"></i>
 					</div>
 					<span class="color-white">@paulacastanoart</span>
 				</a>
@@ -119,7 +119,7 @@
 			<div class="col-sm-6 col-md-3 marginbot-20">
 				<a href="mailto:contacto@paulacastano.com" class="align-center">
 					<div class="icon">
-						<i class="fa fa-envelope-o fa-5x"></i>
+						<i class="fa fa-envelope-o fa-3x"></i>
 					</div>
 					<span class="color-white">contacto@paulacastano.com</span>
 				</a>
