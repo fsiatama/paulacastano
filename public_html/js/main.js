@@ -65,6 +65,7 @@ jQuery(function($) {
 		colorScheme:'light',
 		backgroundColor: 'light',
 		supportIE8: false,
+		galleryFullpageButton: false
 		/**/
 	});
 
