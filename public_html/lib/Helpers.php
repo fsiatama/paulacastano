@@ -404,7 +404,7 @@ class Helpers
 				$result->success    = false;
 			}
 		} else {
-
+			
 			$result->reason		= "Invalid File in ".$tmp.". Please only upload images files";
 			$result->success    = false;
 		}
@@ -499,7 +499,7 @@ class Helpers
 
 	/**
      * sendEmail
-     *
+     * 
      * @param mixed \array [ 'email' => 'ppp@domain.com', 'name' => 'Jhon Doe' ].
      * @param mixed $message       Description.
      * @param mixed $subject       Description.
@@ -512,16 +512,28 @@ class Helpers
      */
 	public static function sendEmail(array $arrEmail , $message, $subject, array $arrAttachedFile = [])
 	{
+		$mail = new PHPMailer;
 
-		$mail = new PHPMailer();
-		$mail->Host = "relay-hosting.secureserver.net";
-		$mail->IsSMTP();
-		$mail->SMTPDebug=true;
-		$mail->SMTPAuth = false;
-		$mail->SMTPSecure = "ssl";
+		$mail->isSMTP();
+		//Enable SMTP debugging
+		// 0 = off (for production use)
+		// 1 = client messages
+		// 2 = client and server messages
+		$mail->SMTPDebug = 0;
+		//Ask for HTML-friendly debug output
+		//$mail->Debugoutput = 'html';
+		//Set the hostname of the mail server
+		$mail->Host = 'smtp.secureserver.net';
+		//Set the SMTP port number - likely to be 25, 465 or 587
+		$mail->Port = 25;
+
+		//Whether to use SMTP authentication
+		$mail->SMTPAuth = true;
+
 		$mail->Username = 'contacto@paulacastano.com';
-		$mail->Password = 'P4ul4C4st4no';
 		
+		$mail->Password = 'P4ul4C4st4no';
+
 		//Set who the message is to be sent from
 		$mail->setFrom('contacto@paulacastano.com', 'Paula Castano.');
 		//Set an alternative reply-to address
@@ -530,7 +542,7 @@ class Helpers
 		foreach ($arrEmail as $key => $row) {
 
 			if ( !empty($row['email']) ) {
-
+				
 				$name = ( ! empty($row['name'] ) ) ? $row['name'] : '' ;
 
 				$mail->addAddress($row['email'], $name);
@@ -552,7 +564,7 @@ class Helpers
 		//activar utf8 para acentos
 		$mail->CharSet = "UTF-8";
 		//$mail->Encoding = "quotedprintable";
-
+		
 		//send the message, check for errors
 		if (!$mail->send()){
 			return [
@@ -560,7 +572,7 @@ class Helpers
 				'error'   => 'Mailer Error: ' . $mail->ErrorInfo
 			];
 		}
-
+		
 		return [
 			'success' => true
 		];
