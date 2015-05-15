@@ -56,14 +56,12 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2">
-
 				<div class="section-heading text-center">
 					<div class="wow bounceInDown" data-wow-delay="0.2s">
 						<h2><?= Lang::get('about.title'); ?></h2>
 					</div>
 					<p class="wow bounceInUp" data-wow-delay="0.3s"><?= Lang::get('about.subtitle'); ?></p>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -87,6 +85,33 @@
 	</div>
 </section>
 <!-- /Section: about -->
+
+<!-- Section: gallery -->
+<section id="gallery" class="home-section text-center bg-gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<div class="wow bounceInDown" data-wow-delay="0.4s">
+				<div class="section-heading">
+					<h2><?= Lang::get('gallery.title'); ?></h2>
+					<p><?= Lang::get('gallery.subtitle'); ?></p>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12" >
+				<div class="wow bounceInUp" data-wow-delay="0.4s">
+					 <div id="paulacastano-gallery"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /Section: services -->
 
 <!-- Section: separator -->
 <section id="separator" class="home-section parallax text-center" data-stellar-background-ratio="0.5">
@@ -128,33 +153,6 @@
 	</div>
 </section>
 <!-- /Section: separator -->
-
-<!-- Section: gallery -->
-<section id="gallery" class="home-section text-center bg-gray">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2">
-				<div class="wow bounceInDown" data-wow-delay="0.4s">
-				<div class="section-heading">
-					<h2><?= Lang::get('gallery.title'); ?></h2>
-					<p><?= Lang::get('gallery.subtitle'); ?></p>
-				</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12 col-md-12 col-lg-12" >
-				<div class="wow bounceInUp" data-wow-delay="0.4s">
-					 <div id="paulacastano-gallery"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- /Section: services -->
 
 <!-- Section: contact -->
 <section id="contact" class="home-section text-center">
