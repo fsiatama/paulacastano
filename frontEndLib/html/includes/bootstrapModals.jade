@@ -1,0 +1,36 @@
+#errorModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='errorModalLabel', aria-hidden='true')
+	.modal-dialog
+		.modal-content
+			.modal-header
+				// modal header
+				button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+				h4#errorModalLabel.modal-title
+					i.fa.fa-warning
+					|   Error!
+			// /modal header
+			// modal body
+			.modal-body
+				#modal-error-msg.alert.alert-danger.margin-bottom0
+			// /modal body
+			.modal-footer.margin-top0
+				// modal footer
+				button.btn.btn-default(data-dismiss='modal') Cerrar
+			// /modal footer
+#sucessModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='successModalLabel', aria-hidden='true')
+	.modal-dialog
+		.modal-content
+			.modal-header
+				// modal header
+				button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+				h4#successModalLabel.modal-title
+					i.fa.fa-check
+					|   Success!
+			// /modal header
+			.modal-body
+				// modal body
+				#modal-success-msg.alert.alert-success.margin-bottom0
+			// /modal body
+			.modal-footer.margin-top0
+				// modal footer
+				button.btn.btn-default(data-dismiss='modal') Cerrar
+

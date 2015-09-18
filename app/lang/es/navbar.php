@@ -4,6 +4,7 @@ return [
 		'home'    => 'Inicio',
 		'about'   => 'Biografía',
 		'gallery' => 'Mi Galería',
+		'exhibitions' => 'Exposiciones',
 		'contact' => 'Contactame'
 	]
 ];

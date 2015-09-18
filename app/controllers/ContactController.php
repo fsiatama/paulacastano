@@ -6,6 +6,10 @@ class ContactController {
 
 	public function indexAction($urlParams, $postParams) {
 
+		$is_template = false;
+
+		return new View('contact', compact('is_template'));
+
 	}
 
 	public function formAction($urlParams, $postParams)

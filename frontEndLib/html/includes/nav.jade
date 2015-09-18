@@ -1,0 +1,26 @@
+- var urlRoot = '<?= URL_RAIZ; ?>'
+#navigation
+	nav.navbar.navbar-custom(role='navigation')
+		.container
+			.row
+				.col-md-12
+					.navbar-header
+						button.navbar-toggle(type='button', data-toggle='collapse', data-target='#menu')
+							i.fa.fa-bars
+					#menu.collapse.navbar-collapse
+						ul.nav.navbar-nav
+							li.active
+								a(href!=urlRoot)
+									| <?= Lang::get('navbar.menu.home'); ?>
+							li
+								a(href!=urlRoot + '#about')
+									| <?= Lang::get('navbar.menu.about'); ?>
+							li
+								a(href!=urlRoot + '#gallery')
+									| <?= Lang::get('navbar.menu.gallery'); ?>
+							li
+								a(href!=urlRoot + 'exhibitions')
+									| <?= Lang::get('navbar.menu.exhibitions'); ?>
+							li
+								a(href!=urlRoot + 'contact')
+									| <?= Lang::get('navbar.menu.contact'); ?>

@@ -87,6 +87,21 @@ img.img-responsive
 	margin-bottom:20px
 }
 
+.padTop30 {
+	padding-top: 30px;
+}
+.marBottom30 {
+	margin-bottom: 30px;
+}
+
+/*Exibiciones */
+#map-canvas {
+	min-width: 300px;
+	min-height: 600px;
+	width: 100%;
+	height: 100%;
+}
+
 @font-face {
 	font-family: 'paulacastano';
 	src:url('../fonts/paulacastano.eot?2mv136');
@@ -373,7 +388,7 @@ hr
 
 .bg-gray
 {
-	background:#f8f8f8
+	background:#dadada
 }
 
 .bg-dark

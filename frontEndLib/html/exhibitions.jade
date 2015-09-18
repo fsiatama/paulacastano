@@ -1,0 +1,38 @@
+- var urlRoot = '<?= URL_RAIZ; ?>'
+
+include ./includes/nav.jade
+
+// Preloader
+#preloader
+	#load
+section.text-center.padTop30
+	.heading-contact
+		.container
+			.row
+				.col-lg-8.col-md-offset-2
+					.section-heading
+						.wow.bounceInDown(data-wow-delay='0.4s')
+							h2 Exposiciones
+						p.wow.lightSpeedIn(data-wow-delay='0.3s')
+							| Actualmente con una exposición fija en 
+							strong Art Fusion Galleries
+	.container
+		.row
+			.col-xs-8
+				.panel.panel-default
+					.panel-body
+						#art-fusion-gallery
+				address
+					strong Art Fusion Galleries
+					br
+					|   3550 N Miami Ave
+					br
+					|   Miami, FL 33127
+					br
+					abbr(title='Phone') P:
+					|  +1 305-573-5730
+					br
+					a(href="http://www.artfusiongalleries.com/", target="_blank") www.artfusiongalleries.com
+
+			.col-xs-4
+				#map-canvas.marBottom30

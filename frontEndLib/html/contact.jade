@@ -1,0 +1,35 @@
+- var urlRoot = '<?= URL_RAIZ; ?>'
+- var nameHolder = '<?= Lang::get("contact.name_holder"); ?>'
+- var emailHolder = '<?= Lang::get("contact.email_holder"); ?>'
+- var messageHolder = '<?= Lang::get("contact.message"); ?>'
+
+include ./includes/nav.jade
+
+// Section: contact
+section#contact.bg-gray.text-center.padTop30
+	.heading-contact
+		.container
+			.row
+				.col-lg-8.col-md-offset-2
+					.section-heading
+						.wow.bounceInDown(data-wow-delay='0.4s')
+							h2 <?= Lang::get('contact.title'); ?>
+						p.wow.lightSpeedIn(data-wow-delay='0.3s')
+							| <?= Lang::get('contact.subtitle'); ?>
+	.container
+		.row
+			.col-lg-8.col-md-offset-2
+				.form-wrapper.marginbot-50
+					form#contactForm
+						.row
+							.form-group
+								label(for='name') <?= Lang::get('contact.name'); ?>
+								input#name.form-control(type='text', name='name', placeholder!=nameHolder, required='required')
+							.form-group
+								label(for='email')
+								input#email.form-control(type='email', name='email', placeholder!=emailHolder, required='required')
+							.form-group
+								label(for='message')
+								textarea#message.form-control(name='message', rows='9', cols='25', required='required', placeholder!=messageHolder)
+							button#contactFormSubmit.btn.btn-skin.btn-block(type='submit') <?= Lang::get('contact.send'); ?>
+include ./includes/separatorSocial.jade

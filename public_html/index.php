@@ -14,9 +14,6 @@ require 'lib/Inflector.php';
 require 'lib/Response.php';
 require 'lib/View.php';
 require 'lib/Lang.php';
-require 'lib/Excel.php';
-//require 'lib/FileDownload.php';
-
 
 //Llamar al controlador indicado
 

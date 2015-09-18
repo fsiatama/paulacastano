@@ -1,0 +1,52 @@
+- var urlRoot = '<?= URL_RAIZ; ?>'
+
+// Preloader
+#preloader
+	#load
+// Section: intro
+section#intro.intro
+	.slogan
+		h1
+			| PAULA CASTAÑO - ARTISTA PLASTICA
+			a(href!=urlRoot)
+				i.icon-signature
+	.page-scroll
+		a(href='#about')
+			i.fa.fa-angle-down.fa-5x.animated
+// Navigation
+include ./includes/nav.jade
+section#about.home-section
+	.container
+		.row
+			.col-lg-8.col-lg-offset-2
+				.section-heading.text-center
+					.wow.bounceInDown(data-wow-delay='0.2s')
+						h2 <?= Lang::get('about.title'); ?>
+					p.wow.bounceInUp(data-wow-delay='0.3s') <?= Lang::get('about.subtitle'); ?>
+	.container
+		.row
+			.col-md-6
+				img.img-responsive.img-rounded.center-block(src='img/biografia-paula-castano.jpg', alt='biografia paula castano')
+			.col-md-6
+				p
+					strong <?= Lang::get('about.phrase1'); ?> 
+					small <?= Lang::get('about.phrase2'); ?> 
+				p <?= Lang::get('about.paragraph1'); ?>
+				p <?= Lang::get('about.paragraph2'); ?>
+				a.btn.btn-skin.btn-scroll(href='#gallery')
+					| <?= Lang::get('gallery.seeGallery'); ?>
+include ./includes/separatorSocial.jade
+// Section: gallery
+section#gallery.home-section.text-center.bg-gray
+	.container
+		.row
+			.col-lg-8.col-lg-offset-2
+				.wow.bounceInDown(data-wow-delay='0.4s')
+					.section-heading
+						h2 <?= Lang::get('gallery.title'); ?>
+						p <?= Lang::get('gallery.subtitle'); ?>
+	.container
+		.row
+			.col-sm-12.col-md-12.col-lg-12
+				.wow.bounceInUp(data-wow-delay='0.4s')
+					#paulacastano-gallery

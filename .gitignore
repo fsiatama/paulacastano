@@ -1,6 +1,7 @@
 /*
 !/public_html
 !/app
+!/frontEndLib
 !/.gitignore
 !/.composer.json
 !/.composer.lock
