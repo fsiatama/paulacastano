@@ -50,26 +50,37 @@ jQuery(function($) {
 			thumbnailImageDescription:'view photo', thumbnailImageDescription_FR:'afficher photo',
 			thumbnailAlbumDescription:'open gallery', thumbnailAlbumDescription_FR:'ouvrir galerie'
 		},
-		//paginationMaxLinesPerPage:1,
-		//viewerToolbar: { standard:'minimizeButton,pageCounter,playPauseButton,linkOriginalButton,label', autoMinimize:5000 },
-		//paginationDots: true,
-		//breadcrumbAutoHideTopLevel:true,
 		locationHash:false,
-		//thumbnailL1Width:'240C xs100C sm100C',
-		//thumbnailL1Height:'160C xs100C sm100C',
 		thumbnailWidth:'auto',
-		//thumbnailHeight:'200 xs80 sm150 la250 xl290',
 		viewerDisplayLogo:true,
-		//photoSorting:'random',
-		//albumSorting:'random',
 		imageTransition : 'slide',
-		//galleryToolbarWidthAligned:false,
-		//galleryFullpageButton:true,
 		colorScheme:'light',
 		backgroundColor: 'light',
 		supportIE8: false,
 		galleryFullpageButton: false
-		/**/
+	});
+	$("#feria-barcu-la-candelaria").nanoGallery({
+		kind: 'flickr',
+		userID: '132809091@N04',
+		thumbnailHoverEffect:[{'name':'labelAppear75', 'duration':400},{'name':'descriptionAppear', 'duration':1000}],
+		thumbnailLabel:{display:false,align:'center', position:'overImageOnMiddle'},
+		thumbnailL1Label:{display:true,align:'center', position:'overImageOnMiddle'},
+		touchAnimationL1: true,
+		touchAnimation:false,
+		touchAutoOpenDelay: -1,
+		photoset:'72157659389560142',
+		i18n:{
+			thumbnailImageDescription:'view photo', thumbnailImageDescription_FR:'afficher photo',
+			thumbnailAlbumDescription:'open gallery', thumbnailAlbumDescription_FR:'ouvrir galerie'
+		},
+		locationHash:false,
+		thumbnailWidth:'auto',
+		viewerDisplayLogo:true,
+		imageTransition : 'slide',
+		colorScheme:'light',
+		backgroundColor: 'light',
+		supportIE8: false,
+		galleryFullpageButton: false
 	});
 
 	$("#paulacastano-gallery").nanoGallery({
@@ -86,26 +97,14 @@ jQuery(function($) {
 			thumbnailImageDescription:'view photo', thumbnailImageDescription_FR:'afficher photo',
 			thumbnailAlbumDescription:'open gallery', thumbnailAlbumDescription_FR:'ouvrir galerie'
 		},
-		//paginationMaxLinesPerPage:1,
-		//viewerToolbar: { standard:'minimizeButton,pageCounter,playPauseButton,linkOriginalButton,label', autoMinimize:5000 },
-		//paginationDots: true,
-		//breadcrumbAutoHideTopLevel:true,
 		locationHash:false,
-		//thumbnailL1Width:'240C xs100C sm100C',
-		//thumbnailL1Height:'160C xs100C sm100C',
 		thumbnailWidth:'auto',
-		//thumbnailHeight:'200 xs80 sm150 la250 xl290',
 		viewerDisplayLogo:true,
-		//photoSorting:'random',
-		//albumSorting:'random',
 		imageTransition : 'slide',
-		//galleryToolbarWidthAligned:false,
-		//galleryFullpageButton:true,
 		colorScheme:'light',
 		backgroundColor: 'light',
 		supportIE8: false,
 		galleryFullpageButton: false
-		/**/
 	});
 
 	//parallax
