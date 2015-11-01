@@ -93,6 +93,7 @@ jQuery(function($) {
 		touchAnimation:false,
 		touchAutoOpenDelay: -1,
 		photoset:'72157656426440974',
+		photoSorting: 'reversed', 
 		i18n:{
 			thumbnailImageDescription:'view photo', thumbnailImageDescription_FR:'afficher photo',
 			thumbnailAlbumDescription:'open gallery', thumbnailAlbumDescription_FR:'ouvrir galerie'
