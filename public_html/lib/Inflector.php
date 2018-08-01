@@ -95,7 +95,7 @@ class Inflector {
 		if(is_array($string)){
 			$tmp = array();
 			foreach($string as $key => $valor){
-				$tmp[$key] = $this->cleanOutputString($valor);
+				$tmp[$key] = static::cleanOutputString($valor);
 			}
 			return $tmp;
 		}

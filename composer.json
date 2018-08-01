@@ -3,6 +3,6 @@
         "php": ">=5.3",
         "skyzyx/mimetypes": "~1.1",
         "phpmailer/phpmailer": "5.*",
-        "adodb/adodb-php": "5.19"
+        "adodb/adodb-php": "5.20"
     }
 }
